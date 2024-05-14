@@ -60,5 +60,10 @@ app.get('/menu', (req, res) => {
  res.render('menu.ejs');
 });
 
+app.get('/menu/:category', (req, res) => {
+    app.locals.restaurantmenu = RESTAURANT.menu
+ res.render('category.ejs');
+});
+
 
 app.listen(3000);

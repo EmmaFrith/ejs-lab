@@ -1,6 +1,4 @@
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,12 +7,16 @@
   <title>Menu</title>
 </head>
 <body>
+<%- include('./partials/nav') %>
   <h1>Full Menu</h1>
 
 
     <% locals.restaurantmenu.forEach(function(dish){ %>
-      <p><%= dish.name %></p>
+      <h2><%= dish.name %></h2>
+      <p>£<%= dish.price %></p>
       <p><%= dish.details %></p>
+      <p>Customers say: <%= dish.rating %>⭐</p>
+      
     <% }); %>
 
 
